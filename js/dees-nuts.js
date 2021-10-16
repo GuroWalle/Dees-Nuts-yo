@@ -155,11 +155,11 @@ function displayCart() {
             <h4 class="basketTotal">
                $${cartCost},00
             </h4>
-         </div>`
+         </div>`;
    }
 }
 
 
 // Caller funksjonen med en gang
 onLoadCartNumbers();
-displayCart(); //?????
+displayCart();

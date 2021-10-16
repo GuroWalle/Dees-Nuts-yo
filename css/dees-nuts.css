@@ -37,6 +37,34 @@ span {
 font-size: 25px;
 }
 
+.cart-buttons {
+   margin-top: 1vw;
+   width: 100vw;
+   height: 4vw;
+   margin-left: 77vw;
+}
+
+.cart-buttons a {
+   border: 3px solid rgb(150, 117, 77);
+   text-decoration: none;
+   text-align: center;
+   background: burlywood;
+   color: black;
+   cursor: pointer;
+   padding: 2px;
+}
+.cart-buttons button {
+   border: 3px solid rgb(150, 117, 77);
+   text-decoration: none;
+   text-align: center;
+   background: burlywood;
+   color: black;
+   padding: 2px;
+
+}
+
+
+
 
 /**** IMAGE COLLAGE ****/
 .img-cork-1 {
