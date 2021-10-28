@@ -119,10 +119,16 @@ function totalCost(product) {
    }
 }
 
+
+function test(verdi) {
+   alert(verdi);
+}
+
 /**** CART ****/
 function displayCart() {
-   let cartItems = localStorage.getItem("productsInCart");
+   let cartItems = localStorage.getItem('productsInCart');
    cartItems = JSON.parse(cartItems);
+   console.log(cartItems);
    let productContainer = document.querySelector(".products");
    let cartCost = localStorage.getItem('totalCost');
 
@@ -134,7 +140,7 @@ function displayCart() {
          productContainer.innerHTML +=
             `
             <div class="product">
-               <button> ❌ </button>
+               <button onclick = "javascript:test('${item.tag}')"> ❌ </button>
                <img src="../assets/${item.tag}.jpeg">
                <span> ${item.name} </span>
             </div>
@@ -155,7 +161,31 @@ function displayCart() {
             <h4 class="basketTotal">
                $${cartCost},00
             </h4>
-         </div>`;
+         </div>`
+
+      deleteButtons();
+   }
+}
+
+function deleteButtons() {
+   let deleteButton = document.querySelectorAll('.product button');
+   let productNumbers = localStorage.getItem('cartNumbers');
+   let cartItems = localStorage.getItem('productsInCart');
+   let cartCost = localStorage.getItem('totalCost');
+
+   cartItems = JSON.parse(cartItems);
+
+
+   for (let index = 0; index < deleteButton.length; index++) {
+      deleteButton[index].addEventListener('onclick', () => {
+
+         /*
+         const produkter = localStorage.getItem('productsInCart');
+         const bla = produkter.findIndex(product => product,)
+
+         console.log(bla);
+         */
+      });
    }
 }
 
